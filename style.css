@@ -1,0 +1,125 @@
+html {
+   margin: 0px;
+   height: 100%;
+   width: 100%;
+}
+
+body {
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+button
+{
+    padding:10px;
+    color: white;
+    background-color: firebrick;
+}
+
+.gameBoard
+{
+    display:inline-block;
+    text-align:center;
+    margin-left:10%;
+}
+.hex
+{
+    display:inline-block;
+    margin:0;
+}
+
+.sidebar
+{
+    
+}
+
+.logo a
+{
+    color:inherit;
+    text-decoration: inherit;
+}
+
+.navBar
+{
+    z-index: 100;
+    background-color: firebrick;
+    width: 100%;
+    height: 50px;
+    position:relative;
+}
+
+.navHolder
+{
+    text-align:center;
+    top:0;right:0;
+    color:white;
+    margin-bottom:10px;
+    margin-top: 20px;
+    position:absolute;
+    width:500px;
+}
+
+.nav
+{
+    margin:0 auto;
+    list-style:none;
+}
+.nav li
+{
+    padding:10px;
+    font-weight: 600;
+    display:inline;
+}
+
+.nav li a
+{
+    color:inherit;
+    text-decoration: none;
+}
+.logo
+{
+    margin-left: 10px;
+}
+.containter
+{
+    min-width: 100%;
+}
+
+.content
+{
+    display:inline-block;
+    margin-left: 10%;
+    margin-right: 10%;
+    height:auto;
+}
+
+
+.footer
+{
+    font-size: 13px;
+    background-color: firebrick;
+    width: 100%;
+    height: 50px;
+    margin:0;
+    position:relative;
+    bottom:0;
+}
+
+.morph {
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+ 
+.morph:hover {
+  border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}

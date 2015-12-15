@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Consider it settled</title>
+        <meta name="description" content="This is just a test">
+        <link rel="stylesheet" href="style.css">
+        
+        <!--DRAG AND DROP SCRIPTING-->
+        <script>
+            function allowDrop(ev) 
+            {
+                ev.preventDefault();
+            }
+
+            function drag(ev) 
+            {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+
+            function drop(ev) 
+            {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                var replace = document.getElementById(ev.target.id);
+                var parent = replace.parentNode;
+                parent.removeChild(replace);
+                parent.appendChild(document.getElementById(data).cloneNode(true));
+                
+                
+            }
+        </script>
+    </head>
+    <body>
+        <div class="navBar">
+           
+            <div class="logo"><h1 style="margin:0;padding:7px; color:white;"><a href="index.html">TEST SITE</h1></div></a>
+            <div class="navHolder">     
+                <ul class="nav">
+                    <li><a href="/index.html">HOME</a></li>|
+                    <li><a href="/new-game.html">NEW GAME</a></li>|
+                    <li><a href="#">THIRD</a></li>|
+                    <li><a href="#">FOURTH</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="width:100%; height:20px; background-color:#333; z-index: 100;"></div>
+<div class="container">
+    <div class="content" style="float:left; margin:0; background-color:#333; padding:40px; border:1px solid #333">
+        <form id="pregame"style="text-align:center;">
+            <h3 style="color:white;">How many Players:
+            <select id="players">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select></h3>
+            
+        </div>
+<!--START TILES-->
+<div style="float:right;background-color:#333;color:white; width:320px; height:1000px; border:1px solid #333; padding:40px;">       
+    <h1 style="text-align:center;">Click and Drag</br> Tile Types</h1></br>
+
+<p><img src="images/lumber.png" draggable="true" ondragstart="drag(event)"  id="lumber"/>
+<img src="images/brick.png" draggable="true" ondragstart="drag(event)"  id="brick"/></p><hr>
+        
+    <p><span style="margin-left:65px;">Lumber</span><span style="margin-left:110px;">Brick</span></p><hr>
+        
+    <p><img src="images/wool.png" draggable="true" ondragstart="drag(event)"  id="wool"/>
+        <img src="images/ore.png" draggable="true" ondragstart="drag(event)"  id="ore"/></p><hr>
+        
+    <p><span style="margin-left:65px;">Wool</span><span style="margin-left:110px;">Ore</span></p><hr>
+        
+    <p><img src="images/grain.png" draggable="true" ondragstart="drag(event)"  id="grain"/>
+        <img src="images/desert.png" draggable="true" ondragstart="drag(event)"  id="desert"/></p>
+        <span style="margin-left:65px;">Grain</span><span style="margin-left:110px;">Desert</span>
+</div><!--END TILES-->
+
+<!--START BOARD-->
+        <div class="gameBoard" id="gameBoard">
+            <div  class="hex" >
+                <input type="text" name="hex1Val" style="position:absolute; margin:55px; width:40px;"></input>
+                <img src="/images/placeholder.png" id="hex0" ondragover="allowDrop(event)" ondrop="drop(event)"/>
+            </div>
+            <div class="hex">
+                <input type="text" name="hex1Val" style="position:absolute; margin:55px; width:40px;"></input>
+                <img src="/images/placeholder.png" id="hex1" ondragover="allowDrop(event)" ondrop="drop(event)"/>
+            </div>
+            <div class="hex">
+                <input type="text" name="hex1Val" style="position:absolute; margin:55px; width:40px;"></input>
+                <img src="/images/placeholder.png" id="hex2" ondragover="allowDrop(event)" ondrop="drop(event)"/>
+            </div>
+        </br>
+            <div class="hex">
+                <input type="text" name="hex1Val" style="position:absolute; margin:55px; width:40px;"></input>
+                <img src="/images/placeholder.png" id="hex3" ondragover="allowDrop(event)" ondrop="drop(event)"/>
+            </div>
+            <div class="hex">
+                <input type="text" name="hex1Val" style="position:absolute; margin:55px; width:40px;"></input>
+                <img src="/images/placeholder.png" id="hex4" ondragover="allowDrop(event)" ondrop="drop(event)"/>
+            </div>
+            <div class="hex">
+                <input type="text" name="hex1Val" style="position:absolute; margin:55px; width:40px;"></input>
+                <img src="/images/placeholder.png" id="hex5" ondragover="allowDrop(event)" ondrop="drop(event)"/>
+            </div>
+            <div class="hex">
+                <input type="text" name="hex1Val" style="position:absolute; margin:55px; width:40px;"></input>
+                <img src="/images/placeholder.png" id="hex6" ondragover="allowDrop(event)" ondrop="drop(event)"/></div>
+        </br>
+            <div class="hex">
+                <input type="text" name="hex1Val" style="position:absolute; margin:55px; width:40px;"></input>
+                <img src="/images/placeholder.png"  id="hex7" ondragover="allowDrop(event)" ondrop="drop(event)"/>
+            </div>
+            <div class="hex">
+                <input type="text" name="hex1Val" style="position:absolute; margin:55px; width:40px;"></input>
+                <img src="/images/placeholder.png"  id="hex8" ondragover="allowDrop(event)" ondrop="drop(event)"/></div>
+            <div class="hex">
+                <input type="text" name="hex1Val" style="position:absolute; margin:55px; width:40px;"></input>
+                <img src="/images/placeholder.png"  id="hex9" ondragover="allowDrop(event)" ondrop="drop(event)"/>
+            </div>
+            <div class="hex">
+                <input type="text" name="hex1Val" style="position:absolute; margin:55px; width:40px;"></input>
+                <img src="/images/placeholder.png"  id="hex10" ondragover="allowDrop(event)" ondrop="drop(event)"/>
+            </div>
+            <div class="hex">
+                <input type="text" name="hex1Val" style="position:absolute; margin:55px; width:40px;"></input>
+                <img src="/images/placeholder.png"  id="hex11" ondragover="allowDrop(event)" ondrop="drop(event)"/>
+            </div>
+        </br>    
+            <div  class="hex">
+                <input type="text" name="hex1Val" style="position:absolute; margin:55px; width:40px;"></input>
+                <img src="/images/placeholder.png" id="hex12" ondragover="allowDrop(event)" ondrop="drop(event)"/>
+            </div>
+            <div class="hex">
+                <input type="text" name="hex1Val" style="position:absolute; margin:55px; width:40px;"></input>
+                <img src="/images/placeholder.png"  id="hex13" ondragover="allowDrop(event)" ondrop="drop(event)"/>
+            </div>
+            <div class="hex">
+                <input type="text" name="hex1Val" style="position:absolute; margin:55px; width:40px;"></input>
+                <img src="/images/placeholder.png"  id="hex14" ondragover="allowDrop(event)" ondrop="drop(event)"/>
+            </div>
+            <div class="hex">
+                <input type="text" name="hex1Val" style="position:absolute; margin:55px; width:40px;"></input>
+                <img src="/images/placeholder.png"  id="hex15" ondragover="allowDrop(event)" ondrop="drop(event)"/>
+            </div>
+        </br>    
+            <div class="hex">
+                <input type="text" name="hex1Val" style="position:absolute; margin:55px; width:40px;"></input>
+                <img src="/images/placeholder.png"  id="hex16" ondragover="allowDrop(event)" ondrop="drop(event)"/>
+            </div>
+            <div class="hex">
+                <input type="text" name="hex1Val" style="position:absolute; margin:55px; width:40px;"></input>
+                <img src="/images/placeholder.png" id="hex17" ondragover="allowDrop(event)" ondrop="drop(event)"/>
+            </div>
+            <div class="hex">
+                <input type="text" name="hex1Val" style="position:absolute; margin:55px; width:40px;"></input>
+                <img src="/images/placeholder.png"  id="hex18" ondragover="allowDrop(event)" ondrop="drop(event)"/>
+</div><!--END BOARD-->
+<div style="clear:both; margin-bottom:20px;"></div>
+<button type="submit" value="Submit" style="margin:10px;">Let's Start!</button></form>
+        </div>
+    
+    
+</div>
+    
+    <div style="clear:both;"></div>
+        <div class ="footer">
+            <div style="width:100%; text-align:center;">
+            <ul class="nav" style="color:white; padding-top:10px;">
+                    <li><a href="/index.html">HOME</a></li>|
+                    <li><a href="/new-game.html">NEW GAME</a></li>|
+                    <li><a href="#">THIRD</a></li>|
+                    <li><a href="#">FOURTH</a></li>
+                </ul></div>
+            <div style="color:white; float:right; margin-right:15px;">&copy; 2015</div>
+        </div>
+    </body>
+</html>
