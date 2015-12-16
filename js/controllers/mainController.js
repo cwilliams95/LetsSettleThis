@@ -7,10 +7,11 @@ function($scope)  {
     };
     return randomRoll + randomRoll;
   };
-  $scope.player1 = {
+  $scope.player = [
+    {
+    "name": null 
     var lumber, grain, brick, wool, ore, victoryPoints = 0;
     var tiles = []
-      
     }
   };
   $scope.player2 = {
@@ -25,4 +26,6 @@ function($scope)  {
     var lumber, grain, brick, wool, ore, victoryPoints = 0;
     var tiles = [];
   };
+  
+  $scope.monopoly = function()
 }]);
