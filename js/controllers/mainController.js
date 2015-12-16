@@ -9,14 +9,20 @@ function($scope)  {
   };
   $scope.player1 = {
     var lumber, grain, brick, wool, ore, victoryPoints = 0;
+    var tiles = []
+      
+    }
   };
   $scope.player2 = {
     var lumber, grain, brick, wool, ore, victoryPoints = 0;
+    var tiles = []
   };
   $scope.player3 = {
     var lumber, grain, brick, wool, ore, victoryPoints = 0;
+    var tiles = []
   };
   $scope.player4 = {
     var lumber, grain, brick, wool, ore, victoryPoints = 0;
+    var tiles = [];
   };
 }]);
