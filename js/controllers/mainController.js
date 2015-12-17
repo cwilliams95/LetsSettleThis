@@ -3,29 +3,25 @@ function($scope)  {
   $scope.title = "Let's Settle This";
   $scope.roll = function() {
     var randomRoll = function() {
-      1 + Math.floor(Math.rand() * 6);
+      return 1 + Math.floor(Math.rand() * 6);
     };
     return randomRoll + randomRoll;
   };
-  $scope.player = [
-    {
-    "name": null 
-    var lumber, grain, brick, wool, ore, victoryPoints = 0;
-    var tiles = []
-    }
-  };
-  $scope.player2 = {
-    var lumber, grain, brick, wool, ore, victoryPoints = 0;
-    var tiles = []
-  };
-  $scope.player3 = {
-    var lumber, grain, brick, wool, ore, victoryPoints = 0;
-    var tiles = []
-  };
-  $scope.player4 = {
-    var lumber, grain, brick, wool, ore, victoryPoints = 0;
-    var tiles = [];
-  };
-  
-  $scope.monopoly = function()
+  $scope.players = function(name) {
+    this.name = name;
+    this.points = 0;
+    this.resources = {
+      "lumber": null,
+      "grain": null,
+      "wool": null,
+      "ore": null,
+      "brick": null,
+    };
+    this.tiles = function()
+  }
+  $scope.library = function(player) {
+    return this.points += this.points
+  $scope.monopoly = function(player, resource) {
+    return this.
+  }
 }]);
