@@ -7,21 +7,27 @@ function($scope) {
     };
     return randomRoll + randomRoll;
   };
-  $scope.newplayer = function (name) {
-    this.name = name;
-    this.points = 0;
-    this.resources = {
-      "lumber": [{ "value": null, "multiplier": 1, "count": 0}],
-      "grain": [{ "value": null, "multiplier": 1, "count": 0}],
-      "wool": [{ "value": null, "multiplier": 1, "count": 0}],
-      "ore": [{ "value": null, "multiplier": 1, "count": 0}],
-      "brick": [{ "value": null, "multiplier": 1, "count": 0}]
+  
+  //function to create a new player and return the player's name as the name for the object created.
+  $scope.newPlayer = function (name) {
+    var name = {
+      "points": 0,
+      "resources": [{
+        "lumber": [{ "value": [], "multiplier": 1, "count": 0}],
+        "grain": [{ "value": [], "multiplier": 1, "count": 0}],
+        "wool": [{ "value": [], "multiplier": 1, "count": 0}],
+        "ore": [{ "value": [], "multiplier": 1, "count": 0}],
+        "brick": [{ "value": [], "multiplier": 1, "count": 0}]
+      }]
     };
+    return name;
   };
+  
+  //function that takes the player name, a tile object formatted to be searched
   $scope.newSettlement = function(name, tiles) {
-      if(tiles.lumber === true) {
-        players.name.resources 
-    }
+    tiles.forEach(function(tile){
+      name.resources[tile.resource].push(tile.value);
+    })
   
 }]);
 
